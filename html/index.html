@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Weather Forecast</h1>
+      <p class="subtitle">Check the weather of any city and save the ones you check often.</p>
+    </header>
+
+    <!-- search area -->
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name, e.g. Pune">
+      <button id="searchBtn">Search</button>
+      <button id="addBtn" class="add-btn">+ Add</button>
+    </div>
+
+    <p id="message"></p>
+
+    <!-- saved places -->
+    <div class="saved-section">
+      <h3>My places</h3>
+      <ul id="placesList"></ul>
+      <p id="noPlaces">No places added yet. Search a city and click Add.</p>
+    </div>
+
+    <!-- current weather (hidden until a search is done) -->
+    <div class="weather-card" id="weatherCard">
+      <div class="top">
+        <div>
+          <h2 id="cityName">--</h2>
+          <p id="dateText">--</p>
+        </div>
+        <div class="icon" id="weatherIcon">☀️</div>
+      </div>
+
+      <div class="temp-row">
+        <span id="temperature">--</span>
+        <span id="description">--</span>
+      </div>
+
+      <div class="details">
+        <div class="detail">
+          <p>Feels like</p>
+          <h4 id="feelsLike">--</h4>
+        </div>
+        <div class="detail">
+          <p>Humidity</p>
+          <h4 id="humidity">--</h4>
+        </div>
+        <div class="detail">
+          <p>Wind</p>
+          <h4 id="wind">--</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- next days forecast -->
+    <div class="forecast" id="forecastSection">
+      <h3>Next 5 days</h3>
+      <div class="forecast-list" id="forecastList"></div>
+    </div>
+
+  </div>
+
+  <footer>
+    Weather data from Open-Meteo
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
